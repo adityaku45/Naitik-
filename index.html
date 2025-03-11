@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Choudhary</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        body {
+            background-color: black;
+            color: cyan;
+            font-family: 'Share Tech Mono', monospace;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        /* Glowing Heading */
+        .heading {
+            font-size: 32px;
+            text-shadow: 0px 0px 15px cyan;
+            animation: rotate3D 4s infinite linear;
+            transform-style: preserve-3d;
+            display: inline-block;
+        }
+
+        @keyframes rotate3D {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        /* Glowing Circle with Red Text */
+        .circle-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid cyan;
+            box-shadow: 0px 0px 15px cyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        
+        .circle-container p {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Form Design */
+        .form-container {
+            width: 80%;
+            max-width: 400px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border: 2px solid cyan;
+            box-shadow: 0px 0px 15px cyan;
+            border-radius: 10px;
+        }
+
+        .input-container {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 12px;
+            background: black;
+            color: cyan;
+            border: 2px solid cyan;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .input-container label {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            background: black;
+            padding: 0 5px;
+            color: cyan;
+            transition: 0.3s;
+        }
+
+        .input-container input:focus + label,
+        .input-container input:valid + label {
+            top: -10px;
+            left: 10px;
+            font-size: 12px;
+            color: cyan;
+        }
+
+        /* Submit Button */
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background: linear-gradient(to right, cyan, magenta, blue);
+            color: black;
+            border: 2px solid cyan;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Message Box */
+        #hacker-message {
+            font-size: 18px;
+            font-weight: bold;
+            color: cyan;
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* YouTube Links (Hidden by Default) */
+        #youtube-links {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .yt-button {
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            background: linear-gradient(to right, cyan, magenta, blue);
+            color: black;
+            border: 2px solid cyan;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .yt-button:hover {
+            background: white;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Heading -->
+    <h1 class="heading">Aditya Choudhary</h1>
+
+    <!-- Circle with Red Name -->
+    <div class="circle-container">
+        <p>Aditya Choudhary</p>
+    </div>
+
+    <div class="form-container">
+        <form id="dataForm">
+            <div class="input-container">
+                <input type="text" id="name" required>
+                <label for="name">Full Name</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="mobile" required>
+                <label for="mobile">Mobile Number</label>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <button type="submit">🚀 Submit</button>
+        </form>
+
+        <p id="message"></p>
+        <p id="hacker-message"></p>
+
+        <!-- Hidden YouTube Links -->
+        <div id="youtube-links">
+            <h2>🎵 Watch Videos:</h2>
+            <a href="https://youtube.com/shorts/xIg8khyvDLI?si=oXcKdu70BJiRaSJA" class="yt-button" target="_blank">📺 YouTube Shorts 1</a>
+            <a href="https://youtu.be/LCWrDvUr7mE?si=dC2QTs9kXH7pMjFs" class="yt-button" target="_blank">🎶 YouTube Song</a>
+            <a href="https://youtube.com/shorts/cfQHcS8_BAk?si=bF8l9QV3GtJf8Zsp" class="yt-button" target="_blank">🎤 Kaifi Khalil</a>
+            <a href="https://youtube.com/shorts/zsI8SjAFkBk?si=kCLT78aoKqj-QW04" class="yt-button" target="_blank">🎼 Kailash Kher</a>
+        </div>
+
+    </div>
+
+    <script>
+        const hackerQuotes = [
+            "🔺 Access Granted: Welcome to the Cyber World!",
+            "⚠️ WARNING: You are being watched!",
+            "💻 HACK THE PLANET!",
+            "🔑 Encryption is the key to security.",
+            "🛡 Stay anonymous, stay secure.",
+            "🚀 Coding is the closest thing to magic!",
+            "🕶 Hackers don’t break security, they build it.",
+            "👁 Dark Web Access: Loading...",
+            "🚨 Red Alert! Intruder Detected!",
+            "🔍 Tracking IP... You can't hide!",
+            "🛠 Reverse Engineering in Progress...",
+            "📡 Signal Interception Successful!",
+            "🚀 You are now in the matrix!"
+        ];
+
+        document.getElementById("dataForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let name = document.getElementById("name").value.trim().toLowerCase();
+            let messageBox = document.getElementById("message");
+            let hackerBox = document.getElementById("hacker-message");
+            let youtubeLinks = document.getElementById("youtube-links");
+
+            if (name === "ayushi pranjal") {
+                let dob = prompt("Enter Your DOB (xx-xx or Date-Month):").trim().toLowerCase();
+                if (dob === "17-09" || dob === "17-september") {
+                    messageBox.innerText = "🌹 Hello Mango! Kya haal hai, I really .... you 😞";
+                    youtubeLinks.style.display = "block";
+                    hackerBox.style.display = "none";
+                } else {
+                    messageBox.innerText = "DOB match nahi kiya! ❌";
+                }
+            } else {
+                let randomQuote = hackerQuotes[Math.floor(Math.random() * hackerQuotes.length)];
+                hackerBox.innerText = randomQuote;
+                hackerBox.style.display = "block";
+                youtubeLinks.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
